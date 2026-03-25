@@ -1489,6 +1489,19 @@
       /* Move hero para baixo — testa da Gabi não fica cortada */
       #hero { padding-top: 40px; }
 
+      /* Eyebrow oculto no mobile */
+      .hero-content .eyebrow { display: none; }
+
+      /* Vídeo: começa do topo do frame — enquadra o rosto sem cortar testa */
+      .hero-video-wrap iframe {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 177.78vh;
+        min-width: 100%;
+        min-height: 100%;
+      }
+
       /* Empurra o texto para ~60% do frame, abaixo do rosto */
       .hero-content {
         top: 60%;
@@ -1497,11 +1510,12 @@
         padding: 0 var(--pad-h);
       }
 
-      /* Headline cabe em 2 linhas */
+      /* Headline em 2 linhas: remove quebras manuais, deixa fluir em 20px */
       .hero-content h1 {
-        font-size: 26px;
+        font-size: 20px;
         max-width: 100%;
       }
+      .hero-content h1 br { display: none; }
 
       .hero-content .hero-sub {
         font-size: 15px;
