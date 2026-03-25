@@ -3,7 +3,9 @@
     "allow": [
       "Bash(mv \"FOTOS CLAUDE\" fotos)",
       "Bash(mv \"fotos/IMG_3707 \\(1\\).PNG\" \"fotos/IMG_3707.PNG\")",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(npx vercel:*)",
+      "Bash(dir:*)"
     ]
   }
 }
