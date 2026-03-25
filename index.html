@@ -270,7 +270,7 @@
       padding: 0 var(--pad-h);
       display: grid;
       grid-template-columns: 2fr 3fr;
-      align-items: center;
+      align-items: stretch;
     }
 
     .hero-video-wrap {
@@ -306,7 +306,12 @@
     .hero-content {
       position: relative;
       z-index: 2;
-      padding-top: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 100px;
+      padding-bottom: 48px;
+      overflow: visible;
     }
 
     .hero-content .eyebrow {
@@ -1479,6 +1484,9 @@
        RESPONSIVE — 768px · Hero mobile: texto na metade inferior
     ───────────────────────────────────────────── */
     @media (max-width: 768px) {
+      /* Move hero para baixo — testa da Gabi não fica cortada */
+      #hero { padding-top: 40px; }
+
       /* Empurra o texto para ~60% do frame, abaixo do rosto */
       .hero-content {
         top: 60%;
@@ -1609,9 +1617,9 @@
         <span class="stat-label">Países com certificação</span>
       </div>
       <div class="credencial-stat reveal reveal-delay-4">
-        <span class="stat-number" data-count="11248">11.248</span>
-        <span class="stat-label">Procedimentos realizados</span>
-        <span class="stat-sub">0 intercorrências</span>
+        <span class="stat-number" data-count="20000" data-suffix="+">20.000+</span>
+        <span class="stat-label">Pacientes atendidos</span>
+        <span class="stat-sub" style="color: var(--gold); letter-spacing: 0.14em; font-size: 10px; margin-top: 6px; display: block;">0 intercorrências</span>
       </div>
     </div>
   </section>
@@ -2131,18 +2139,18 @@
 
           <div class="price-main">
             <div class="price-label">Valor integral</div>
-            <div class="price-value">R$ 12.500</div>
+            <div class="price-value">R$ 15.000</div>
             <div class="price-note">19 e 20 de junho de 2026 · Rio de Janeiro</div>
           </div>
 
           <div class="price-options">
             <div class="price-option highlight">
               <span class="po-label">PIX ou Transferência (5% de desconto)</span>
-              <span class="po-value">R$ 11.875</span>
+              <span class="po-value">R$ 14.250</span>
             </div>
             <div class="price-option">
               <span class="po-label">Parcelado no cartão sem juros</span>
-              <span class="po-value">10× R$ 1.250</span>
+              <span class="po-value">10× R$ 1.500</span>
             </div>
           </div>
 
