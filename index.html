@@ -1475,6 +1475,31 @@
       .btn-primary { width: 100%; text-align: center; }
     }
 
+    /* ─────────────────────────────────────────────
+       RESPONSIVE — 768px · Hero mobile: texto na metade inferior
+    ───────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      /* Empurra o texto para ~60% do frame, abaixo do rosto */
+      .hero-content {
+        top: 60%;
+        bottom: auto;
+        text-align: center;
+        padding: 0 var(--pad-h);
+      }
+
+      /* Headline cabe em 2 linhas */
+      .hero-content h1 {
+        font-size: 26px;
+        max-width: 100%;
+      }
+
+      .hero-content .hero-sub {
+        font-size: 15px;
+        max-width: 100%;
+        margin-bottom: 24px;
+      }
+    }
+
     /* 390px e menores — ajuste fino */
     @media (max-width: 400px) {
       .header-logo { font-size: 13px; }
